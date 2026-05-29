@@ -32,17 +32,17 @@ modules:
     sources:
       - type: git
         url: https://github.com/nukeop/nuclear.git
-        tag: player@1.34.0
-        commit: c2c40678c2a95b743978390d93ec34acd0208402
+        tag: player@1.38.0
+        commit: 1d459b26aec95c1eec1eaee5025759e2fc41415f
       - type: file
-        url: https://registry.npmjs.org/pnpm/-/pnpm-10.33.0.tgz
-        sha256: bfcc1bcbad279b13a516c446a75b3c58b6904b45d57a1951411015e50b751a80
-        dest-filename: pnpm-10.33.0.tgz
+        url: https://registry.npmjs.org/pnpm/-/pnpm-10.33.4.tgz
+        sha256: 8e70ddc6649b18bc3d895cf3a908c0291ea4c38039ad8722c47e018daf1e9cfc
+        dest-filename: pnpm-10.33.4.tgz
       - pnpm-sources.json
       - cargo-sources.json
     build-commands:
       - mkdir -p /run/build/nuclear-music-player/.npm-global
-      - npm install -g pnpm-10.33.0.tgz
+      - npm install -g pnpm-10.33.4.tgz
 
       - pnpm install --offline --frozen-lockfile
       - pnpm --filter @nuclearplayer/player build:frontend
