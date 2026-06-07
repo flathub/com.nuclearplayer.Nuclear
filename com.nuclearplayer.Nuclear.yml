@@ -32,8 +32,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/nukeop/nuclear.git
-        tag: player@1.38.0
-        commit: 1d459b26aec95c1eec1eaee5025759e2fc41415f
+        tag: player@1.39.1
+        commit: 99e0588cdb47c0c6dbd94e8a377814ef9c9fedae
       - type: file
         url: https://registry.npmjs.org/pnpm/-/pnpm-10.33.4.tgz
         sha256: 8e70ddc6649b18bc3d895cf3a908c0291ea4c38039ad8722c47e018daf1e9cfc
