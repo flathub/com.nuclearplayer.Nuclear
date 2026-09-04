@@ -32,19 +32,24 @@ modules:
     sources:
       - type: git
         url: https://github.com/nukeop/nuclear.git
-        tag: player@1.47.0
-        commit: 1f5b40ffc148556b98b04e924ef65edc93dcde0a
-      - type: file
-        url: https://registry.npmjs.org/pnpm/-/pnpm-10.33.4.tgz
-        sha256: 8e70ddc6649b18bc3d895cf3a908c0291ea4c38039ad8722c47e018daf1e9cfc
-        dest-filename: pnpm-10.33.4.tgz
+        tag: player@1.48.3
+        commit: 5d0c479d1da48f0f5a497fccac48785956cab0e7
+      - type: archive
+        url: https://registry.npmjs.org/@pnpm/exe.linux-x64/-/exe.linux-x64-12.0.0.tgz
+        sha256: d0c64efab39d560ef3ae4dc8be5dd08951e5409ed2d53cb6b8317b7713c26333
+        dest: pnpm-exe
+        only-arches: [x86_64]
+      - type: archive
+        url: https://registry.npmjs.org/@pnpm/exe.linux-arm64/-/exe.linux-arm64-12.0.0.tgz
+        sha256: e227252e352b8023fd1151fbe36eeb934a26eef2e0c327b8d1a1aad7b4bfbd90
+        dest: pnpm-exe
+        only-arches: [aarch64]
       - pnpm-sources.json
       - cargo-sources.json
     build-commands:
-      - mkdir -p /run/build/nuclear-music-player/.npm-global
-      - npm install -g pnpm-10.33.4.tgz
+      - install -Dm755 pnpm-exe/pnpm /run/build/nuclear-music-player/.npm-global/bin/pnpm
 
-      - pnpm install --offline --frozen-lockfile
+      - pnpm install --offline --frozen-lockfile --trust-lockfile
       - pnpm --filter @nuclearplayer/player build:frontend
       - pnpm --filter @nuclearplayer/player tauri build --no-bundle
         -c '{"build":{"beforeBuildCommand":""}}'
