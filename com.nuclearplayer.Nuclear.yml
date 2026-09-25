@@ -32,16 +32,16 @@ modules:
     sources:
       - type: git
         url: https://github.com/nukeop/nuclear.git
-        tag: player@1.48.6
-        commit: b3a1a81a25f80dc0b88fd434863a4afc0c181437
+        tag: player@1.49.0
+        commit: 6b07e1c99d1abaced8efb2c2071c4fd5c81d2228
       - type: archive
-        url: https://registry.npmjs.org/@pnpm/exe.linux-x64/-/exe.linux-x64-12.0.0.tgz
-        sha256: d0c64efab39d560ef3ae4dc8be5dd08951e5409ed2d53cb6b8317b7713c26333
+        url: https://registry.npmjs.org/@pnpm/exe.linux-x64/-/exe.linux-x64-12.4.1.tgz
+        sha256: 614d18bdcb121a844c0260b315d76b737e687346c001b8e093fd0a93202c2d6b
         dest: pnpm-exe
         only-arches: [x86_64]
       - type: archive
-        url: https://registry.npmjs.org/@pnpm/exe.linux-arm64/-/exe.linux-arm64-12.0.0.tgz
-        sha256: e227252e352b8023fd1151fbe36eeb934a26eef2e0c327b8d1a1aad7b4bfbd90
+        url: https://registry.npmjs.org/@pnpm/exe.linux-arm64/-/exe.linux-arm64-12.4.1.tgz
+        sha256: efd504b1fbea3461dda32204481137434557cfc1ed70ab03f0dc6f96dd2be845
         dest: pnpm-exe
         only-arches: [aarch64]
       - pnpm-sources.json
