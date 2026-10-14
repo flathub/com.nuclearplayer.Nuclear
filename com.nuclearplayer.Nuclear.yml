@@ -32,8 +32,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/nukeop/nuclear.git
-        tag: player@1.51.0
-        commit: 688a1fee32c2c5e59c84f00b132e024e6b2e2cf2
+        tag: player@1.51.1
+        commit: a0cbaccbdf8f9ef3040a94f8536565cad09a2930
       - type: archive
         url: https://registry.npmjs.org/@pnpm/exe.linux-x64/-/exe.linux-x64-12.0.0.tgz
         sha256: d0c64efab39d560ef3ae4dc8be5dd08951e5409ed2d53cb6b8317b7713c26333
@@ -62,6 +62,7 @@ modules:
       - install -Dm644 packages/player/src-tauri/resources/com.nuclearplayer.Nuclear.metainfo.xml
         /app/share/metainfo/com.nuclearplayer.Nuclear.metainfo.xml
 
+      - install -Dm644 flatpak/icons/com.nuclearplayer.Nuclear.svg /app/share/icons/hicolor/scalable/apps/com.nuclearplayer.Nuclear.svg
       - install -Dm644 flatpak/icons/512x512.png /app/share/icons/hicolor/512x512/apps/com.nuclearplayer.Nuclear.png
       - install -Dm644 flatpak/icons/256x256.png /app/share/icons/hicolor/256x256/apps/com.nuclearplayer.Nuclear.png
       - install -Dm644 flatpak/icons/128x128.png /app/share/icons/hicolor/128x128/apps/com.nuclearplayer.Nuclear.png
