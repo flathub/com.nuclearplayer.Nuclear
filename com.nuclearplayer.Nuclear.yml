@@ -16,7 +16,6 @@ finish-args:
   - --socket=wayland
   - --device=dri
   - --socket=pulseaudio
-  - --own-name=org.mpris.MediaPlayer2.nuclear
 
 build-options:
   append-path: /run/build/nuclear-music-player/.npm-global/bin:/usr/lib/sdk/node22/bin:/usr/lib/sdk/rust-stable/bin
@@ -33,8 +32,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/nukeop/nuclear.git
-        tag: player@1.56.0
-        commit: 1bb2d5bf031863f53f977085f50985b811e4b30b
+        tag: player@1.56.4
+        commit: 93721f64acee5936812efd90d4a1115acfba1c48
       - type: archive
         url: https://registry.npmjs.org/@pnpm/exe.linux-x64/-/exe.linux-x64-12.0.0.tgz
         sha256: d0c64efab39d560ef3ae4dc8be5dd08951e5409ed2d53cb6b8317b7713c26333
